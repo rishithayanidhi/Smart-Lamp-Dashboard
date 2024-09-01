@@ -1,4 +1,5 @@
 html, body {
+  /* width: 90%; */
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -10,20 +11,23 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #323232;
+  background-color: #434242;
 }
 .header-left {
   display: flex;
   align-items: center;
 }
 .logo {
+  /* position: absolute; */
   height: 50px;
   margin:2px;
+  border-radius: 40px;
 }
 nav ul {
   display: flex;
   list-style-type: none;
   margin: 0;
+  margin-left: 20px ;
   padding: 0;
 }
 nav ul li {
@@ -312,7 +316,7 @@ button {
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 10px;
-  width: 250px;
+  width: 150px;
   text-align: center;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
