@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Light Monitoring Dashboard</title>
+    <link rel="stylesheet" href="main/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="../assets/logo 1.png" alt="StreetMan Logo" class="logo">
+            <nav>
+                <ul>
+                    <!-- <li><a href="#">Shortcuts</a></li> -->
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Inventory</a></li>
+                    <li><a href="#">Map View</a></li>
+                    <li><a href="#">Alarms</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Savings</a></li>
+                    <!-- <li><a href="#">Dimming Manager</a></li> -->
+                    <li><a href="#">Analytics</a></li>
+                    <!-- id="analytics-link" -->
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="header-status">
+                <div><i class="fas fa-bell"></i> 3</div>
+                <div><i class="fas fa-wifi"></i> 24</div>
+                <div><i class="fas fa-lightbulb"></i> 174</div>
+            </div>
+            <div class="header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+    </header>
+
+
+    <!-- header completed -->
+
+    <!-- INVENTORY CODE -->
+    <div class="container">
+        <div class="tabular">
+            <div class="top-bar">
+                <ul class="menu">
+                    <li>Access Points</li>
+                    <li class="active">Streetlights</li>
+                    <li>Sensors</li>
+                    <li>Cameras</li>
+                </ul>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pole ID</th>
+                        <th>Access Point ID</th>
+                        <th>Light Status</th>
+                        <th>Device ID</th>
+                        <th>Fault Status</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example row -->
+                    <tr>
+                        <td>P-085</td>
+                        <td>AP009</td>
+                        <td>
+                            <span class="light-status on">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 6a6 6 0 1 1 12 0c0 2.905-2.342 5.278-4.5 5.637V14.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.863C4.342 11.278 2 8.905 2 6zm4.5 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z" />
+                                </svg>
+                                On
+                            </span>
+                        </td>
+                        <td>C-085</td>
+                        <td>
+                            <span class="charging-status">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red"
+                                    class="bi bi-plug-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 1a2 2 0 1 1 4 0v4h1a1 1 0 0 1 1 1v3c0 2.02-.85 3.867-2.192 5.17a.87.87 0 0 1-.088.08c-.308.277-.8.75-1.322 1.23a.5.5 0 0 1-.796-.38c-.003-.162.004-.34.017-.52.029-.372.094-.82.225-1.254.129-.432.335-.91.674-1.342a.5.5 0 0 1 .792 0c.319.42.513.91.64 1.348.122.424.19.835.224 1.19a.5.5 0 0 1-.796.387l-.02-.02c-.528-.5-1.023-.988-1.34-1.26a9.918 9.918 0 0 1-.67-.658C6.85 11.883 6 10.02 6 8V5a1 1 0 0 1 1-1h1V1zM5.793.793a1 1 0 0 1 1.414 0L8 1.586l.793-.793a1 1 0 1 1 1.414 1.414L8.414 3l1.793 1.793a1 1 0 0 1-1.414 1.414L7 4.414 5.207 6.207a1 1 0 0 1-1.414-1.414L5.586 3 3.793 1.207a1 1 0 1 1 1.414-1.414L7 1.586 8.793.793a1 1 0 0 1 1.414 0z" />
+                                </svg>
+                            </span>
+                        </td>
+                        <td>
+                            <img src="https://img.icons8.com/material-outlined/24/marker.png" alt="Map Icon">
+                        </td>
+                    </tr>
+                    <!-- Add more rows similarly -->
+                </tbody>
+            </table>
+
+            <!-- Pagination Control -->
+            <div class="pagination">
+                <button class="prev-page">«</button>
+                <span class="page-info">1 of 2</span>
+                <button class="next-page">»</button>
+                <span class="page-size">
+                    Page Size:
+                    <select>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </span>
+            </div>
+
+        </div>
+        <!-- <p style="color:red;">Hello</p> -->
+        <div class="tabularmap">
+            <div class="map-topbar">
+                <!-- <p style="font-weight:bold;text-align:center;padding:5px;">Map view</p> -->
+                <p class="menumap">Map View</p>
+            </div>
+            <div class="map-section">
+                <div id="map" style="padding:2%;">
+                    <!-- box-shadow:0 0 10px rgba(0, 0, 0, 0.1);" -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.179012214926!2d144.9560543151548!3d-37.81627937975132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xfcf64e2e8fd9e70e!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1637715282955!5m2!1sen!2sau"
+                        width="500" height="300" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- INVENTORY CODE -->
+
+
+    <!-- id= "dashboard-content" style="display: none;" -->
+
+    <div class="dashboard">
+        <div class="main-content">
+            <div class="content">
+                <div class="summary">
+                    <div class="card">
+                        <h3>Inventory Summary</h3>
+                        <canvas id="inventorySummaryChart"></canvas>
+                    </div>
+                    <div class="card">
+                        <h3>Alarms</h3>
+                        <canvas id="alarmsChart"></canvas>
+                    </div>
+
+                    <!-- remaining card -->
+                    <div class="card">
+                        <h3 class="notification">Alerts & Notifications</h3>
+                        <div class="progress-container">
+                            <div class="progress-box">
+                                <!-- <div class="progress-fill" id="costSavingsProgress"></div> -->
+                                <img class="Alert" src="../assets/Alert.png" alt="alert">
+                            </div>
+                            <!-- <p class="progress-text">45%</p> -->
+                        </div>
+                        <p>Fault Lamp : <span>C-075 23.00 pm
+                                <br> C-096 03.00 am </span></p>
+                        <p>Active Lamp Status: <span>Positive, Except 2 Lamp ()</span></p>
+                    </div>
+                    <div class="card">
+                        <h3>Data & Report</h3>
+                        <div class="progress-container">
+                            <div class="progress-box">
+                                <!-- <div class="progress-fill" id="energySavingsProgress"></div> -->
+                                <img class="report" src="../assets/Report.jpg" alt="Report">
+                            </div>
+                            <button>Generate Report</button>
+                        </div>
+                        <!-- <p>Average <span>14,312 kW</span> </p> -->
+                        <button class="Export">Export</button>
+                    </div>
+                    <div class="card">
+                        <h3>Integration with External Systemd</h3>
+                        <div class="progress-container">
+                            <div class="progress-box">
+                                <!-- <div class="progress-fill" id="dimmingSavingsProgress"></div> -->
+                            </div>
+                            <!-- <p class="progress-text">40%</p> -->
+                        </div>
+                        <!-- <p>Average <span>13,843 kW</span></p> -->
+                        <img class="Coming" src="../assets/coming soon.jpg" alt="coming soon">
+                    </div>
+                    <!-- end card -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main/scripts.js"></script>
+</body>
+
+</html>
