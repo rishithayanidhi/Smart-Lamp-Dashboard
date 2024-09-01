@@ -212,6 +212,8 @@ nav ul li a {
   flex-wrap: wrap; /* Allow wrapping if necessary */
   gap: 20px; /* Space between cards */
   justify-content: space-between; /* Distribute space evenly */
+  margin-right: auto;
+  margin-left:auto;
 }
 
 .card {
