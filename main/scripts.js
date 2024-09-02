@@ -127,11 +127,11 @@ var ctx = document.getElementById("inventorySummaryChart").getContext("2d");
 var inventorySummaryChart = new Chart(ctx, {
   type: "doughnut",
   data: {
-    labels: ["Streetlights", "Gateways", "Sensors", "Others"],
+    labels: ["Streetlights","Sensors", "Others"],
     datasets: [
       {
         label: "Inventory Summary",
-        data: [60, 20, 10, 10],
+        data: [60,120, 10],
         backgroundColor: ["#FFCE56", "#36A2EB", "#FF6384", "#FF9F40"],
       },
     ],
